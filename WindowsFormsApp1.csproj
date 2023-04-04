@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{821C74B8-107C-4EFF-B829-92C6C9CB0BE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Categoriya.cs" />
+    <Compile Include="Classes\Produckt.cs" />
+    <Compile Include="Classes\Resept.cs" />
+    <Compile Include="Classes\ReseptDB.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\AddProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProd.Designer.cs">
+      <DependentUpon>AddProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Autorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Autorization.Designer.cs">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Bludo.cs" />
+    <Compile Include="Classes\Verification.cs" />
+    <Compile Include="Forms\BludoAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BludoAddForm.Designer.cs">
+      <DependentUpon>BludoAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReseptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReseptForm.Designer.cs">
+      <DependentUpon>ReseptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Autoriz.cs" />
+    <Compile Include="Model\BludaFromDB.cs" />
+    <Compile Include="Model\CategoriyaFromDB.cs" />
+    <Compile Include="Model\Connection.cs" />
+    <Compile Include="Model\ProducktFromDB.cs" />
+    <Compile Include="Model\Regestration.cs" />
+    <Compile Include="Forms\Passwordik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Passwordik.Designer.cs">
+      <DependentUpon>Passwordik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ReseptFromDB.cs" />
+    <Compile Include="Model\UserFromDB.cs" />
+    <Compile Include="Forms\Productiki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Productiki.Designer.cs">
+      <DependentUpon>Productiki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Redakt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Redakt.Designer.cs">
+      <DependentUpon>Redakt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Regestr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Regestr.Designer.cs">
+      <DependentUpon>Regestr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddProd.resx">
+      <DependentUpon>AddProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Autorization.resx">
+      <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BludoAddForm.resx">
+      <DependentUpon>BludoAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Productiki.resx">
+      <DependentUpon>Productiki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Redakt.resx">
+      <DependentUpon>Redakt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Passwordik.resx">
+      <DependentUpon>Passwordik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReseptForm.resx">
+      <DependentUpon>ReseptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Regestr.resx">
+      <DependentUpon>Regestr.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Captchas\AfF0p.png" />
+    <Content Include="Captchas\Br2Zo5.png" />
+    <Content Include="Captchas\Jo0eZ.png" />
+    <Content Include="Captchas\Qwe12.png" />
+    <Content Include="Images\picture.jpg" />
+    <Content Include="Images\бастурма.jpg" />
+    <Content Include="Images\омлет с луком.jpg" />
+    <Content Include="Images\рулет с яблоками.jpg" />
+    <Content Include="Images\салат летний.jpg" />
+    <Content Include="Images\творог.jpg" />
+    <Content Include="Images\харчо.jpg" />
+    <None Include="Resources\profil1.jpg" />
+    <None Include="Resources\profil.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
